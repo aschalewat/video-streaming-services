@@ -14,11 +14,11 @@ pipeline {
 
     stages {
         stage('Checkout') {
-                    steps{
-                            checkout scm
-                        }
-                    }
-            }
+            steps{
+                    checkout scm
+                }
+        }
+
         stage('Build and test') {
             steps {
                 build job: 'multi-branch-pipeline-1'
