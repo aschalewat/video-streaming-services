@@ -21,13 +21,13 @@ pipeline {
 
         stage('Build and test') {
             steps {
-                build job: 'multi-branch-pipeline-1'
+                build job: 'multi-branch-pipeline-1/master'
             }
         }
 
         stage('Deploy') {
             steps {
-                build job: 'multi-branch-pipeline-2'
+                build job: 'multi-branch-pipeline-2/master'
             }
         }
     }
