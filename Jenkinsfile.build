@@ -16,9 +16,10 @@ pipeline {
 
         stage('Build') {
             steps {
-                scripts{
-                sh 'mnv clean install'
+                scripts {
+                    sh 'mnv clean install'
                 }
+            }
         }
         stage('Test') {
             steps {
