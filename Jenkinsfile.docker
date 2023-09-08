@@ -5,6 +5,9 @@ pipeline {
         maven 'Maven3'
         jdk 'Java8'
     }
+    environment {
+        env.WORKSPACE = 'C:\ProgramData\Jenkins\.jenkins\workspace\multi-branch-pipeline-1_master\'
+    }
 
 
     stages {
@@ -12,6 +15,12 @@ pipeline {
             steps{
                     checkout scm
                 }
+        }
+
+        stage('Workspace') {
+            steps {
+                ws('C:\ProgramData\Jenkins\.jenkins\workspace\multi-branch-pipeline-1_master\')
+            }
         }
 
         stage('Build') {
@@ -26,7 +35,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                script {
+                    sh 'env'
+                }
             }
         }
     }
