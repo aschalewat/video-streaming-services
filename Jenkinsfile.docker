@@ -6,7 +6,7 @@ pipeline {
         jdk 'Java8'
     }
     environment {
-        env.WORKSPACE = 'C:\ProgramData\Jenkins\.jenkins\workspace\multi-branch-pipeline-1_master\'
+        env.WORKSPACE = 'C:/ProgramData/Jenkins/.jenkins/workspace/multi-branch-pipeline-1_master/'
     }
 
 
@@ -19,7 +19,7 @@ pipeline {
 
         stage('Workspace') {
             steps {
-                ws('C:\ProgramData\Jenkins\.jenkins\workspace\multi-branch-pipeline-1_master\')
+                ws('C:/ProgramData/Jenkins/.jenkins/workspace/multi-branch-pipeline-1_master/')
             }
         }
 
