@@ -15,8 +15,9 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                scripts {
+            scripts {
+                steps {
+                    sh 'env'
                     sh 'mnv clean install'
                 }
             }
