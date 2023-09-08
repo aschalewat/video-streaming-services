@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     sh 'env'
-                    sh 'mnv clean install'
+                    sh 'mvn clean install'
                 }
             }
         }
